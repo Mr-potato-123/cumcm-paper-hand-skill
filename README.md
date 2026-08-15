@@ -21,14 +21,16 @@
 
 ```bash
 # 方式一: 复制到全局技能目录
-git clone https://github.com/<你的用户名>/<本仓库>.git
-cp -r <本仓库>/SKILL.md <本仓库>/templates <本仓库>/ref ~/.claude/skills/math-modeling-skill/
+git clone https://github.com/Mr-potato-123/cumcm-paper-hand-skill.git
+cp -r cumcm-paper-hand-skill/SKILL.md cumcm-paper-hand-skill/templates cumcm-paper-hand-skill/ref ~/.claude/skills/cumcm-paper-hand-skill/
 
 # 方式二: 项目级安装(只对当前项目生效)
-mkdir -p .claude/skills && cp -r <本仓库> .claude/skills/math-modeling-skill/
+mkdir -p .claude/skills && cp -r cumcm-paper-hand-skill .claude/skills/cumcm-paper-hand-skill/
 ```
 
 > 其他支持 skill 机制的 Agent(如 Cursor Rules、Windsurf 等)参考各自文档,把本仓库放到对应 skills 目录即可。**无需安装到全局也行**——把 `SKILL.md`、`templates/`、`ref/` 三个部分直接放进参赛文件夹,Agent 也会按 SKILL.md 的规范工作。
+>
+> 📌 仓库地址: [github.com/Mr-potato-123/cumcm-paper-hand-skill](https://github.com/Mr-potato-123/cumcm-paper-hand-skill)
 
 ### 使用流程
 
