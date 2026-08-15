@@ -68,6 +68,7 @@ description: 数学建模竞赛(CUMCM 国赛 / MCM/ICM 美赛)建模分析与论
 6. **先草稿后终稿**:先出 Markdown 草稿供确认,再落 LaTeX 终稿与 PDF。
 7. **语言**:国赛中文;美赛中文稿定稿后译英文。
 
-## 脚本
+## 脚本与可定制性
 
 - [scripts/ocr_pdfs.py](scripts/ocr_pdfs.py):图片型 PDF → Markdown 可读版。参赛者添加自己的参考论文到 [ref/](ref/) 时运行(需 Python + rapidocr)。
+- 本技能是"文件即配置":[references/](references/)、[templates/](templates/)、[ref/](ref/)、[scripts/](scripts/) 中的文件由参赛者维护,内容可能与仓库初始版本不同——**以参赛者当前文件夹中的实际内容为准**,不要假设默认值。
