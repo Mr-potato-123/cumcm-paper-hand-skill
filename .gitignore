@@ -1,0 +1,15 @@
+# 个人对话截图等本地文件,不建议发布到公开仓库
+微信图片_*.jpg
+微信图片_*.jpeg
+
+# OCR 临时文件
+_page_*.png
+_test_*
+
+# Python
+__pycache__/
+*.pyc
+
+# 系统文件
+.DS_Store
+Thumbs.db

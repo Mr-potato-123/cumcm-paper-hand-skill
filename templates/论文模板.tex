@@ -1,0 +1,197 @@
+% !TeX program = xelatex
+% ============================================================
+% 数模论文 LaTeX 模板(国赛 CUMCM 格式)
+% 编译方式: XeLaTeX(推荐, 中文支持最好); 或 LuaLaTeX
+% 依赖宏包: ctex, amsmath, amssymb, booktabs, graphicx,
+%           algorithm, algorithmic, multirow, float
+% 用法: 复制本文件到你的 论文/ 目录, 按注释填写内容,
+%       每个子问题复制 5.1 小节的结构.
+% ============================================================
+\documentclass[11pt]{ctexart}
+
+% ---------- 页面设置: 国赛常用 A4 上下左右 2.5cm ----------
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+\usepackage{amsmath, amssymb}   % 数学
+\usepackage{booktabs}           % 三线表
+\usepackage{graphicx}           % 插图
+\usepackage{multirow}           % 表格合并
+\usepackage{float}              % [H] 图表位置
+\usepackage{caption}            % 图表标题
+\captionsetup{font=small, labelfont=bf}
+
+% ---------- 算法环境 ----------
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+
+% ---------- 代码环境(附录用) ----------
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small, breaklines=true, frame=single}
+
+\title{\textbf{论文题目: 研究对象与方法}}
+\author{参赛队员1 \quad 参赛队员2 \quad 参赛队员3}
+\date{}
+
+\begin{document}
+\maketitle
+
+% ============================================================
+% 摘要: 最后写! 每问一句"针对…问题, 首先…, 建立…模型,
+% 采用…算法求解, 得到…结果; 通过…检验, 表明模型…"
+% ============================================================
+\begin{abstract}
+【第一段: 背景 + 总体思路。】
+针对问题一: 【……】。
+针对问题二: 【……】。
+针对问题三: 【……】。
+本文模型在【指标】上达到【数值】, 可为【场景】提供参考。
+
+\noindent\textbf{关键词:} 【词1; 词2; 词3】
+\end{abstract}
+
+\section{问题重述}
+\subsection{问题背景}
+【用自己的话压缩题目背景, 不照抄原文。】
+
+\subsection{问题提出}
+\begin{itemize}
+  \item \textbf{问题一:}【整理为明确的数学任务: 研究对象、已知条件、任务】。
+  \item \textbf{问题二:}【同上, 并说明与问题一的关系】。
+  \item \textbf{问题三:}【同上】。
+\end{itemize}
+
+\section{问题分析}
+【逐问: 题目要求 $\rightarrow$ 关键难点 $\rightarrow$ 数据/变量特征
+$\rightarrow$ 总体建模思路 $\rightarrow$ 求解与检验方法。
+写"为什么该模型适合本题", 不提前展开公式。】
+\subsection{对问题一的分析}
+【……】
+\subsection{对问题二的分析}
+【……注意承接问题一: 是否使用问题一的模型或输出。】
+\subsection{对问题三的分析}
+【……】
+
+\section{模型假设}
+\begin{enumerate}
+  \item 【假设内容】【理由: 因为……所以可这样假设】;
+  \item 【……】;
+  \item 【……】.
+\end{enumerate}
+以上假设的合理性将在模型检验部分进一步验证。
+
+\section{符号说明}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{clc}
+    \toprule
+    符号 & 含义 & 单位 \\
+    \midrule
+    $x_i$ & 第 $i$ 个…… & …… \\
+    $\lambda$ & …… & …… \\
+    \bottomrule
+  \end{tabular}
+  \caption{符号说明}
+\end{table}
+
+\section{模型建立与求解}
+
+\subsection{问题一模型的建立与求解}
+
+\subsubsection{问题一的分析与数据处理}
+【题目要求 $\rightarrow$ 难点 $\rightarrow$ 数据特征 $\rightarrow$ 思路。
+数据处理交代: 有什么问题、用什么方法、关键参数、为何这样选、
+保留什么特征、效果展示。】
+
+\subsubsection{【模型名】的建立}
+【先文字说明思路, 再给公式, 再解释每一项含义。
+公式前必须有引导文字("由……原理可得""考虑到……因素, 引入……")。】
+\begin{equation}
+  f(\mathbf{x}) = \sum_{i=1}^{n} w_i x_i \label{eq:model1}
+\end{equation}
+其中 $w_i$ 表示【……】, $x_i$ 表示【……】。式 \eqref{eq:model1} 用于计算【……】, 下一步将【……】。
+
+% 优化问题的标准型
+\begin{equation}
+\begin{aligned}
+  \max\ / \min \quad & f(\mathbf{x}) \\
+  \text{s.t.} \quad & g_j(\mathbf{x}) \le 0, \quad j = 1, \dots, m, \\
+  & \mathbf{x} \in D .
+\end{aligned}
+\label{eq:std}
+\end{equation}
+
+\subsubsection{模型求解}
+【算法/伪代码/流程图。算法环境示例:】
+\begin{algorithm}[H]
+  \caption{【算法名】}
+  \begin{algorithmic}[1]
+    \REQUIRE 【输入: 数据、参数】
+    \ENSURE 【输出: 最优解】
+    \STATE 初始化种群/解集 $P_0$, 参数 $T_{\max}$;
+    \FOR{$t = 1$ \textbf{to} $T_{\max}$}
+      \STATE 【迭代更新规则: 如新解生成、适应度计算】;
+      \STATE 【约束判断与修正】;
+      \IF{满足终止条件}
+        \STATE \textbf{break}
+      \ENDIF
+    \ENDFOR
+    \RETURN 最优解
+  \end{algorithmic}
+\end{algorithm}
+
+\subsubsection{结果与分析}
+% 占位图: 换成你自己的图片; 文件不存在时自动跳过, 不影响编译
+\IfFileExists{图1_xxx.png}{%
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{图1_xxx.png}
+  \caption{图1 三种策略下的成本对比}
+\end{figure}
+}{}
+【每张图/表必须在正文被引用并讨论("看图说话"); 对比表最优值加粗(\textbf{数值}); 结果是否符合预期与假设; 检验: 误差/残差/交叉验证/敏感性/多模型对比。】
+
+\subsubsection{本问小结}
+【"综上, 本文建立了……模型, 求得……, 模型在验证集上的指标为……, 说明模型……, 所得结果将在问题二作为……使用。"】
+
+\subsection{问题二模型的建立与求解}
+【同上结构。开头写承上启下过渡句: "问题二在问题一的基础上进一步考虑了……, 因此我们在模型一的基础上做了如下改进……"】
+
+\subsection{问题三模型的建立与求解}
+【同上结构。】
+
+\section{模型评价与推广}
+\subsection{模型优点}
+\begin{itemize}
+  \item 【……】
+\end{itemize}
+\subsection{模型缺点}
+\begin{itemize}
+  \item 【真实具体, 如"计算复杂度高, 数据量增大时求解时间超过……"】
+\end{itemize}
+\subsection{模型改进方向}
+\begin{itemize}
+  \item 【针对缺点给出可行改进思路】
+\end{itemize}
+\subsection{模型推广}
+\begin{itemize}
+  \item 【结合本题背景向外延伸, 不空谈】
+\end{itemize}
+
+\section{参考文献}
+\begin{thebibliography}{9}
+  \bibitem{ref1} 作者. 题名[J]. 期刊, 年, 卷(期): 页码.
+  \bibitem{ref2} 作者. 题名[D]. 城市: 学校, 年.
+\end{thebibliography}
+
+\appendix
+\section{详细推导}
+【冗长推导放这里, 正文注明"详细推导见附录A"。】
+
+\section{程序代码}
+\begin{lstlisting}[language=Python]
+# 核心代码
+\end{lstlisting}
+
+\end{document}
