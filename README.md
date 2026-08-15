@@ -61,8 +61,8 @@ my-mcm-project/
 ├── SKILL.md            # 核心技能文件:工作流程 + 论文写作规范 + 检查清单
 ├── README.md           # 本文件
 ├── templates/          # 模板
-│   ├── 论文模板.md     # 论文写作模板(Markdown)
-│   ├── 论文模板.tex    # 论文 LaTeX 模板(XeLaTeX)
+│   ├── 论文模板.tex    # 论文唯一模板(XeLaTeX,交付 .tex + PDF)
+│   ├── 论文模板.pdf    # 模板编译预览
 │   ├── 建模笔记模板.md # 每题建模笔记模板
 │   ├── 目录结构模板.md # 参赛文件夹结构模板
 │   └── README.md
