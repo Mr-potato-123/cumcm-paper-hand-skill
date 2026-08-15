@@ -1,4 +1,4 @@
-# 数模 SKILL —— 数学建模竞赛论文写作与全流程辅助
+# cumcm-paper-hand-skill —— 数学建模竞赛论文写作与全流程辅助
 
 > 与 AI Agent(如 Claude Code 等)配合,在**你的参赛文件夹**里完成数学建模竞赛的建模、求解与论文写作,最终**以 LaTeX 交付论文**(论文.tex + 编译 PDF)。内置获奖优秀论文参考库(OCR 可读版)、论文 LaTeX 模板与目录结构模板。
 
@@ -12,7 +12,7 @@
 
 1. **参赛者把"原始题目、每道题的建模和解答"分文件夹整理好**,在这个文件夹里打开 AI Agent;
 2. Skill 指导 Agent 按 **摸底 → 核对建模求解材料 → 论文撰写** 三步工作;
-3. 论文按写作规范主干([数模.md](skills/cumcm-paper-hand-skill/数模.md))撰写,**LaTeX 交付**(XeLaTeX 编译零错误,产出 PDF);
+3. 论文按写作规范主干([论文写作规范.md](skills/cumcm-paper-hand-skill/references/论文写作规范.md))撰写,**LaTeX 交付**(XeLaTeX 编译零错误,产出 PDF);
 4. 写作时参考 [ref/](skills/cumcm-paper-hand-skill/ref/) 的获奖优秀论文——**特意覆盖国赛三大题型**(A 优化 / B 物理 / C 数据),且 B、C 各有一对"同题不同法"对照(详见 [选篇说明](skills/cumcm-paper-hand-skill/ref/README.md))。
 
 ### 🖊️ 定位:论文手(Paper Writer)
@@ -86,7 +86,7 @@ my-mcm-project/
 - **每问闭环**:问题分析 → 模型建立 → 模型求解 → 结果分析 → 小结;子问题间必须有承接
 - **摘要技法**:最后写,每问"针对…问题,首先…,建立…模型,采用…算法求解,得到…结果;通过…检验",直接写数值
 - **结果可信**:误差分析、残差分析、交叉验证、敏感性分析、多模型对比
-- 完整规范见 [数模.md](skills/cumcm-paper-hand-skill/数模.md),Agent 写论文前须完整读取并逐条执行
+- 完整规范见 [论文写作规范.md](skills/cumcm-paper-hand-skill/references/论文写作规范.md),Agent 写论文前须完整读取并逐条执行
 
 ## 📖 参考论文怎么用
 
