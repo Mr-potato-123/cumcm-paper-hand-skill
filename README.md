@@ -64,8 +64,11 @@ my-mcm-project/
 ├── LICENSE
 └── skills/                      # 技能本体(自包含,官方 anthropics/skills 同款布局)
     └── cumcm-paper-hand-skill/
-        ├── SKILL.md             # 技能入口:触发描述 + 三步工作流 + 检查清单
-        ├── 数模.md              # 论文写作规范主干(被 SKILL.md 引用)
+        ├── SKILL.md             # 技能入口:触发描述 + 三步工作流路由 + 红线约束
+        ├── references/          # 按需加载的详细文档(渐进披露)
+        │   ├── 论文写作规范.md  # 写作规范主干(骨架/每问闭环/摘要/文献/附录)
+        │   ├── 检查清单.md      # 交付前逐项核对清单
+        │   └── 建模流程.md      # 完整建模闭环(仅用户要求重做时加载)
         ├── templates/           # 模板
         │   ├── 论文模板.tex     # 论文唯一模板(XeLaTeX,交付 .tex + PDF)
         │   ├── 论文模板.pdf     # 模板编译预览(无 TeX 也能看效果)
